@@ -1,0 +1,85 @@
+*{scroll-behavior: smooth;}
+body{background-color: #000;}
+body::-webkit-scrollbar{display: none;}/*que le funcione al que le funcione (no es necesario)*/
+
+/*=====================-CABECERA-=====================*/
+header{overflow: hidden; width: 100%; height: calc(100vh + 5px); background-color: #000; position: relative; margin-bottom: 50px; border-bottom: 5px solid #fcf60a;}
+.banner__item{position: absolute; top: 50%; left: 50%; width:100%; height: 100%; z-index: 1; transform: translateX(-50%) translateY(-50%);}
+.banner__logo{filter: drop-shadow(0px 0px 10px #fcf60a); animation: neon 5s linear infinite; z-index: 2;}
+.header__sombra{position: absolute; background: radial-gradient(ellipse at center, rgba(255,255,255,0) 55%, rgba(255,235,0,1)); width: 100%; height: 100%; top: 0px; left: 0px; z-index: 2;}
+
+@keyframes neon {
+    0%{filter: drop-shadow(0px 0px 10px #fcf60a);}
+    10%{filter: drop-shadow(0px 0px 1px #fcf60a)}
+    40%{filter: drop-shadow(0px 0px 10px #fcf60a);}
+    41%{filter: drop-shadow(0px 0px 1px #fcf60a)}
+    42%{filter: drop-shadow(0px 0px 10px #fcf60a);}
+    43%{filter: drop-shadow(0px 0px 1px #fcf60a)}
+    44%{filter: drop-shadow(0px 0px 10px #fcf60a);}
+    60%{filter: drop-shadow(0px 0px 1px #fcf60a)}
+    73%{filter: drop-shadow(0px 0px 10px #fcf60a);}
+    74%{filter: drop-shadow(0px 0px 1px #fcf60a)}
+    76%{filter: drop-shadow(0px 0px 10px #fcf60a);}
+    78%{filter: drop-shadow(0px 0px 1px #fcf60a)}
+    100%{filter: drop-shadow(0px 0px 10px #fcf60a);}
+}
+
+/*=========================-NAV-=========================*/
+.nav{width: 70%; height: 50px; background-color: #fcf60a; clip-path: polygon(100% 0, 100% 50%, 97% 100%, 0 100%, 0 0); display: flex; justify-content: center; align-items: center; position: fixed; top: 0px; left: -70%; transition: left 0.5s; z-index: 901;}
+.nav ul{display: flex; list-style: none;}
+.nav ul li{padding: 2px; margin: 0 3px 0 3px;}
+.nav ul li a{text-decoration: none; font-size: 20px; color: #000; font-family: 'Rajdhani', sans-serif; font-weight: bold; letter-spacing: 2px;}
+.nav img{height: 100%;}
+.nav_bordes__izq{width: 50px; height: 100%; height: 100dvh; background-image: url("/IMG/BordeL.png"); background-size: 100% 100%; top: 0px; left: -50px; z-index: 900; position: fixed;  transition: left 0.5s;}
+.nav_bordes__der{width: 50px; height: 100%; height: 100dvh; background-image: url("/IMG/BordeR.png"); background-size: 100% 100%; top: 0px; right: -50px; z-index: 900; position: fixed;  transition: right 0.5s;}
+
+/*=========================-MAIN-=========================*/
+main{background-color: #131313; background-image: url("/IMG/fondoMain.png"); width: 100%; box-shadow: 0px -10px 5px #131313; padding: 100px;}
+/*-TRAILER-*/
+.main__trailer{display: flex; justify-content: center; width: 100%;}
+.main__trailer__video{width: 70%; border-radius: 10px; border: 2px solid #4ffc0a; box-shadow: 0px 0px 15px #4ffc0a; aspect-ratio: 16/9;}
+/*-INFO-*/
+.main__info{height: 400px; width: 100%; margin-top: 150px; display: flex; justify-content: flex-start; background-color: #fcf60a; clip-path: polygon(0 0, 0 75%, 1% 80%, 1% 100%, 99% 100%, 99% 90%, 100% 85%, 100% 15%, 99% 10%, 99% 0);}
+.main__info__img{height: 100%; width: 50%;}
+.main__info__list{height: 100%; width: 50%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: flex-start;  padding: 30px; color: #000; font-size: 20px;}
+.main__info__list__item{font-family: 'Rajdhani', sans-serif;}
+.main__info__list__item b{text-decoration: underline;}
+/*-RESUMEN-*/
+.main__history_summary{height: 400px; width: 80%; margin-top: 150px; margin-left: 10%; background-color: #000; clip-path: polygon(0 0, 0 100%, 35% 100%, 40% 95%, 65% 95%, 70% 100%, 100% 100%, 100% 0); position: relative;}
+.main__history_summary__img{position: absolute; width: 100%; height: 100%; z-index: 0;}
+.main__history_summary__p{width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); letter-spacing: 2px; line-height: 20px; padding: 50px; position: absolute; color: #fff; font-family: 'Rajdhani', sans-serif; font-weight: bold; font-size: 15px; column-count: 2; z-index: 2;}
+/*PERSONAJES*/
+.main__characters{width: 80%; margin-top: 150px; margin-left: 10%; background-color: transparent; display: flex; flex-wrap: wrap;}
+
+.main__characters__char{width: 200px; height: 430.39px; background-color: #131313; border: 1px solid #000; padding: 10px; border-radius: 5px;}
+.main__characters__char__img{width: 100%;}
+.main__characters__char__name{text-align: center; color: #fff; font-family: sans-serif; font-size: 20px; border-bottom: 2px solid #fcf60a; padding-bottom: 2px;}
+.main__characters__char__description{text-align: center; color: #fff; font-family: 'Rajdhani', sans-serif; line-height: 13px; padding-top: 4px; height: calc(100% - 205px); display: flex; align-items: center;}
+
+
+.main__characters__char__imgDavid{clip-path: polygon(30% 0, 0 30%, 20% 50%, 0 70%, 30% 100%, 50% 80%, 70% 100%, 100% 70%, 80% 50%, 100% 30%, 70% 0, 50% 20%);}
+.main__characters__char__imgLucy{clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);}
+.main__characters__char__imgRebecca{clip-path: circle(50% at 50% 50%);}
+.main__characters__char__imgPilar{clip-path: polygon(0 30%, 30% 30%, 30% 0, 70% 0, 70% 30%, 100% 30%, 100% 70%, 70% 70%, 70% 100%, 30% 100%, 30% 70%, 0 70%);}
+.main__characters__char__imgKiwi{clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);}
+.main__characters__char__imgMaine{clip-path: polygon(50% 0%, 65% 35%, 98% 35%, 75% 60%, 84% 100%, 50% 80%, 16% 100%, 25% 60%, 2% 35%, 35% 35%);}
+.main__characters__char__imgDorio{clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);}
+
+
+
+
+
+/*clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+
+
+
+
+
+*/
+/*FOOTER*/
+footer{height: 200px; width: 100%; background-color: #fcf60a;}
+/*
+
+
+
+*/
