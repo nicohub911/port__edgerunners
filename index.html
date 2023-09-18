@@ -9,7 +9,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
 
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="estilos/normalize.css">
         <link rel="stylesheet" href="estilos/styles.css">
@@ -29,21 +31,19 @@
                 <div class="header__sombra" data-velx="1" data-vely="1" ></div>
             </div>
         </header>
-     
         <nav id="nav" class="nav">
             <ul>
                 <li><a href="#">INICIO</a></li>
-                <li><a href="">PERSONAJES</a></li>
+                <li><a href="">INFORMACION</a></li>
             </ul>
             <img src="IMG/Logo.png" alt="">
             <ul>
-                <li><a href="">123456</a></li>
-                <li><a href="">123456789</a></li>
+                <li><a href="#">PERSONAJES</a></li>
+                <li><a href="#summary">HISTORIA</a></li>
             </ul>
         </nav>
         <aside id="nav_izq" class="nav_bordes__izq"></aside>
         <aside id="nav_der" class="nav_bordes__der"></aside>  
-
         <main>
             <section class="main__trailer">
                 <iframe class="main__trailer__video" src="https://www.youtube.com/embed/3s4uuDJbqBs" frameborder="0"></iframe>
@@ -59,72 +59,73 @@
                 </ul>
             </section>
             <section class="main__characters">
+                <button class="characters__track__left" onclick="slider(false)"><</button>
+                <button class="characters__track__right" onclick="slider(true)">></button>
+                <div class="characters__track" id="track">
+                    <article class="main__characters__char">
+                        <img class="main__characters__char__img main__characters__char__imgDavid" src="IMG/david.png" alt="personaje David">
+                        <h3 class="main__characters__char__name">David Matinez</h3>
+                        <p class="main__characters__char__description">
+                            Un adolescente de ascendencia hispana que estudia en la prestigiosa Academia Arasaka. 
+                            Debido a que proviene de una familia pobre, sus compañeros de clase lo acosan sin descanso 
+                            y siente que no pertenece a la escuela. Una tragedia repentina y devastadora lo lleva a 
+                            abandonar su educación y lo pone en el camino de convertirse en un "edgerunner".
+                        </p>
+                    </article>
 
-                <article class="main__characters__char">
-                    <img class="main__characters__char__img main__characters__char__imgDavid" src="IMG/david.png" alt="personaje David">
-                    <h3 class="main__characters__char__name">David Matinez</h3>
-                    <p class="main__characters__char__description">
-                        Un adolescente de ascendencia hispana que estudia en la prestigiosa Academia Arasaka. 
-                        Debido a que proviene de una familia pobre, sus compañeros de clase lo acosan sin descanso 
-                        y siente que no pertenece a la escuela. Una tragedia repentina y devastadora lo lleva a 
-                        abandonar su educación y lo pone en el camino de convertirse en un "edgerunner".
-                    </p>
-                </article>
+                    <article class="main__characters__char">
+                        <img class="main__characters__char__img main__characters__char__imgLucy" src="IMG/lucy.png" alt="personaje David">
+                        <h3 class="main__characters__char__name">Lucy Kushinada</h3>
+                        <p class="main__characters__char__description">
+                            Una joven "netrunner" que se involucra románticamente con David y le presenta el inframundo 
+                            criminal de Night City. Tiene un odio particular hacia Arasaka y sueña con viajar a la Luna.
+                        </p>
+                    </article>
 
-                <article class="main__characters__char">
-                    <img class="main__characters__char__img main__characters__char__imgLucy" src="IMG/lucy.png" alt="personaje David">
-                    <h3 class="main__characters__char__name">Lucy Kushinada</h3>
-                    <p class="main__characters__char__description">
-                        Una joven «netrunner» que se involucra románticamente con David y le presenta el inframundo 
-                        criminal de Night City. Tiene un odio particular hacia Arasaka y sueña con viajar a la Luna.
-                    </p>
-                </article>
+                    <article class="main__characters__char">
+                        <img class="main__characters__char__img main__characters__char__imgRebecca" src="IMG/rebeca.png" alt="personaje David">
+                        <h3 class="main__characters__char__name">Rebecca</h3>
+                        <p class="main__characters__char__description">
+                            Una edgerunner de gatillo fácil miembro de la pandilla de Maine. Ella es también la hermana menor de Pilar.
+                        </p>
+                    </article>
 
-                <article class="main__characters__char">
-                    <img class="main__characters__char__img main__characters__char__imgRebecca" src="IMG/rebeca.png" alt="personaje David">
-                    <h3 class="main__characters__char__name">Rebecca</h3>
-                    <p class="main__characters__char__description">
-                        Una edgerunner de gatillo fácil miembro de la pandilla de Maine. Ella es también la hermana menor de Pilar.
-                    </p>
-                </article>
+                    <article class="main__characters__char">
+                        <img class="main__characters__char__img main__characters__char__imgPilar" src="IMG/pilar.png" alt="personaje David">
+                        <h3 class="main__characters__char__name">Pilar</h3>
+                        <p class="main__characters__char__description">
+                            Un edgerunner de vanguardia al que se le describe como un «techie», cósmico y tosco. 
+                            Él y su hermana Rebecca generalmente se unen al equipo de Maine para hacer trabajos de mercenarios.
+                        </p>
+                    </article>
 
-                <article class="main__characters__char">
-                    <img class="main__characters__char__img main__characters__char__imgPilar" src="IMG/pilar.png" alt="personaje David">
-                    <h3 class="main__characters__char__name">Pilar</h3>
-                    <p class="main__characters__char__description">
-                        Un edgerunner de vanguardia al que se le describe como un «techie», cósmico y tosco. 
-                        Él y su hermana Rebecca generalmente se unen al equipo de Maine para hacer trabajos de mercenarios.
-                    </p>
-                </article>
+                    <article class="main__characters__char">
+                        <img class="main__characters__char__img main__characters__char__imgKiwi" src="IMG/kiwi.png" alt="personaje David">
+                        <h3 class="main__characters__char__name">Kiwi</h3>
+                        <p class="main__characters__char__description">
+                            Una netrunner veterana que siempre es fría y estoica. Es parte del grupo de Maine y también sirve como mentora de Lucy.
+                        </p>
+                    </article>
 
-                <article class="main__characters__char">
-                    <img class="main__characters__char__img main__characters__char__imgKiwi" src="IMG/kiwi.png" alt="personaje David">
-                    <h3 class="main__characters__char__name">Kiwi</h3>
-                    <p class="main__characters__char__description">
-                        Una netrunner veterana que siempre es fría y estoica. Es parte del grupo de Maine y también sirve como mentora de Lucy.
-                    </p>
-                </article>
+                    <article class="main__characters__char">
+                        <img class="main__characters__char__img main__characters__char__imgMaine" src="IMG/maine.png" alt="personaje David">
+                        <h3 class="main__characters__char__name">Maine</h3>
+                        <p class="main__characters__char__description">
+                            Un edgerunner veterano que comanda su propia pandilla. Es uno de los clientes de Glora y permite a David unirse al grupo bajo su guía.
+                        </p>
+                    </article>
 
-                <article class="main__characters__char">
-                    <img class="main__characters__char__img main__characters__char__imgMaine" src="IMG/maine.png" alt="personaje David">
-                    <h3 class="main__characters__char__name">Maine</h3>
-                    <p class="main__characters__char__description">
-                        Un edgerunner veterano que comanda su propia pandilla. Es uno de los clientes de Glora y permite a David unirse al grupo bajo su guía.
-                    </p>
-                </article>
-
-                <article class="main__characters__char">
-                    <img class="main__characters__char__img main__characters__char__imgDorio" src="IMG/dorio.png" alt="personaje David">
-                    <h3 class="main__characters__char__name">Dorio</h3>
-                    <p class="main__characters__char__description">
-                        Una edgerunner veterana y mano derecha de Maine. Es muy fuerte y a pesar de su apariencia ruda, 
-                        tiene un lado tierno que solo muestra a las personas en las que confía.
-                    </p>
-                </article>
-                
-
+                    <article class="main__characters__char">
+                        <img class="main__characters__char__img main__characters__char__imgDorio" src="IMG/dorio.png" alt="personaje David">
+                        <h3 class="main__characters__char__name">Dorio</h3>
+                        <p class="main__characters__char__description">
+                            Una edgerunner veterana y mano derecha de Maine. Es muy fuerte y a pesar de su apariencia ruda, 
+                            tiene un lado tierno que solo muestra a las personas en las que confía.
+                        </p>
+                    </article>
+                </div>
             </section>
-            <section class="main__history_summary">
+            <section class="main__history_summary" id="summary">
                 <img class="main__history_summary__img" src="IMG/nigthCity.png" alt="ciudad nigth city">
                 <p class="main__history_summary__p">
                     La historia de Cyberpunk: Edgerunners transcurre en la ciudad estadounidense de Night City, una megaciudad en el Estado Libre de California del Norte. 
@@ -139,9 +140,39 @@
                     <br><small>By Wikipedia</small>
                 </p>
             </section>
+            <section class="main__soundTrack">
+                <h2 class="main__soundTrack__title">Soundtrack</h2>
+                <div class="main__soundTrack__slider">
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/7mykoq6R3BArsSpNDjFQTm?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/3nh5RSXnRSHWuQbOJvQr0g?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/7fnxvHVAZQkFFThzq8hwSP?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/4mn5HdatHKN7iFGDes9G8i?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/5ne3rgAhc9H6DmaXcadkTd?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/0MENcfdtQQMTlepBOQGIZ8?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/4oXMEXcjuypQAFFugKA7dB?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/5ZMHnB4gWl05GKKGZA7M2U?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/1fJKciZS8FIWaitARAImTt?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/1NBoGIIGzCvYKRgAQrIMBA?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/1GhEAuoPdSPiOgqiwLvdf0?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/2DMczojxJDReZrmo9ki2ns?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <!--mirror-->
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/7mykoq6R3BArsSpNDjFQTm?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/3nh5RSXnRSHWuQbOJvQr0g?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/7fnxvHVAZQkFFThzq8hwSP?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/4mn5HdatHKN7iFGDes9G8i?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/5ne3rgAhc9H6DmaXcadkTd?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/0MENcfdtQQMTlepBOQGIZ8?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/4oXMEXcjuypQAFFugKA7dB?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/5ZMHnB4gWl05GKKGZA7M2U?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/1fJKciZS8FIWaitARAImTt?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/1NBoGIIGzCvYKRgAQrIMBA?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/1GhEAuoPdSPiOgqiwLvdf0?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                    <div class="main__soundTrack__slider__item"><iframe src="https://open.spotify.com/embed/track/2DMczojxJDReZrmo9ki2ns?si=bdc4392dfaaf4854" frameborder="0"></iframe></div>
+                </div>
+            </section>
         </main>
-        <footer class="main__footer">
-            <iframe src="https://open.spotify.com/embed/track/7mykoq6R3BArsSpNDjFQTm?si=bdc4392dfaaf4854" frameborder="0"></iframe>
+        <footer>
+            <p class="main__footer__text">Todos los derechos reservados Nicolás Esteban (en realidad no) 😋.</p>
         </footer>
         <script src="script.js"></script>
     </body>

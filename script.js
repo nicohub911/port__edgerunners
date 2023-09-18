@@ -1,5 +1,7 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+let positionSlider = 0;
 
+document.addEventListener("DOMContentLoaded", ()=>{
+    track.insertAdjacentElement("afterbegin", lastTrackElement);
 });
 
 window.addEventListener("mousemove", (e)=>{
@@ -39,3 +41,29 @@ window.addEventListener("scroll", (e)=>{
 
 
 
+function slider(direccion) {
+    const track = document.getElementById("track");
+    const trackElement = document.querySelectorAll(".main__characters__char");
+    let firstTrackElement = trackElement[0];
+    let lastTrackElement = trackElement[trackElement.length - 1];
+
+    if (direccion) {
+        track.style.transition = "transform 0.5s";
+        track.style.transform = `translateX(-200px)`;
+        let wait = setTimeout(() => {
+            track.style.transition = "none";
+            track.insertAdjacentElement("beforeend", firstTrackElement);
+            track.style.transform = `translateX(200px)`;
+            clearTimeout(wait);
+        }, 600);
+    } else{
+        track.style.transition = "transform 0.5s";
+        track.style.transform = `translateX(200px)`;
+        let wait = setTimeout(() => {
+            track.style.transition = "none";
+            track.insertAdjacentElement("afterbegin", lastTrackElement);
+            track.style.transform = `translateX(-200px)`;
+            clearTimeout(wait);
+        }, 600);
+    }
+}
