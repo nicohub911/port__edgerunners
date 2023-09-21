@@ -17,17 +17,17 @@
         <link rel="stylesheet" href="estilos/styles.css">
         <title>Edgerunners</title>
     </head>
-    <body style="height: 200vh;">
+    <body>
         <header>
             <div>
-                <img class="banner__item" data-velx="0" data-vely="-0.1" src="IMG/B1.png" alt="Personaje Maine">
-                <img class="banner__item" data-velx="0" data-vely="0.1" src="IMG/B2.png" alt="Personaje Kiwi">
-                <img class="banner__item" data-velx="0" data-vely="-0.1" src="IMG/B3.png" alt="Personaje Rebecca">
-                <img class="banner__item" data-velx="0" data-vely="0.1" src="IMG/B4.png" alt="Personaje David Martinez">
-                <img class="banner__item" data-velx="0" data-vely="-0.1" src="IMG/B5.png" alt="Personaje Lucy">
-                <img class="banner__item" data-velx="0" data-vely="0.1" src="IMG/B6.png" alt="Personaje pilar">
-                <img class="banner__item" data-velx="0" data-vely="-0.1" src="IMG/B7.png" alt="Personaje Dorio">
-                <img class="banner__item banner__logo" data-velx="0.05" data-vely="0.05" src="IMG/Blogo.png" alt="Logo de la serie">
+                <img class="banner__item" data-velx="0" data-vely="-0.1" src="IMG/B1.webp" alt="Personaje Maine">
+                <img class="banner__item" data-velx="0" data-vely="0.1" src="IMG/B2.webp" alt="Personaje Kiwi">
+                <img class="banner__item" data-velx="0" data-vely="-0.1" src="IMG/B3.webp" alt="Personaje Rebecca">
+                <img class="banner__item" data-velx="0" data-vely="0.1" src="IMG/B4.webp" alt="Personaje David Martinez">
+                <img class="banner__item" data-velx="0" data-vely="-0.1" src="IMG/B5.webp" alt="Personaje Lucy">
+                <img class="banner__item" data-velx="0" data-vely="0.1" src="IMG/B6.webp" alt="Personaje pilar">
+                <img class="banner__item" data-velx="0" data-vely="-0.1" src="IMG/B7.webp" alt="Personaje Dorio">
+                <img class="banner__item banner__logo" data-velx="0.05" data-vely="0.05" src="IMG/Blogo.webp" alt="Logo de la serie">
                 <div class="header__sombra" data-velx="1" data-vely="1" ></div>
             </div>
         </header>
@@ -36,20 +36,20 @@
                 <li><a href="#">INICIO</a></li>
                 <li><a href="">INFORMACION</a></li>
             </ul>
-            <img src="IMG/Logo.png" alt="">
+            <img src="IMG/Logo.webp" alt="">
             <ul>
                 <li><a href="#">PERSONAJES</a></li>
                 <li><a href="#summary">HISTORIA</a></li>
             </ul>
         </nav>
         <aside id="nav_izq" class="nav_bordes__izq"></aside>
-        <aside id="nav_der" class="nav_bordes__der"></aside>  
+        <aside id="nav_der" class="nav_bordes__der"></aside>
         <main>
             <section class="main__trailer">
                 <iframe class="main__trailer__video" src="https://www.youtube.com/embed/3s4uuDJbqBs" frameborder="0"></iframe>
             </section>
             <section class="main__info">
-                <img class="main__info__img" src="IMG/portada.png" alt="portada de la serie">
+                <img class="main__info__img" src="IMG/portada.webp" alt="portada de la serie">
                 <ul class="main__info__list">
                     <li class="main__info__list__item"><b>Nombre:</b> Cyberpunk Edgerunners</li>
                     <li class="main__info__list__item"><b>Directores:</b> Hiroyuki Imaishi, Masahiko Ōtsuka y Hiromi Wakabayashi</li>
@@ -63,70 +63,81 @@
                 <button class="characters__track__right" onclick="slider(true)">></button>
                 <div class="characters__track" id="track">
                     <article class="main__characters__char">
-                        <img class="main__characters__char__img main__characters__char__imgDavid" src="IMG/david.png" alt="personaje David">
-                        <h3 class="main__characters__char__name">David Matinez</h3>
-                        <p class="main__characters__char__description">
-                            Un adolescente de ascendencia hispana que estudia en la prestigiosa Academia Arasaka. 
-                            Debido a que proviene de una familia pobre, sus compañeros de clase lo acosan sin descanso 
-                            y siente que no pertenece a la escuela. Una tragedia repentina y devastadora lo lleva a 
-                            abandonar su educación y lo pone en el camino de convertirse en un "edgerunner".
-                        </p>
+                        <div class="main__characters__char__content main__characters__char__imgDavid">
+                            <h3 class="main__characters__char__content__name">David Matinez</h3>
+                            <p class="main__characters__char__content__summary">
+                                Un adolescente de ascendencia hispana que estudia en la prestigiosa Academia Arasaka. 
+                                Debido a que proviene de una familia pobre, sus compañeros de clase lo acosan sin descanso 
+                                y siente que no pertenece a la escuela. Una tragedia repentina y devastadora lo lleva a 
+                                abandonar su educación y lo pone en el camino de convertirse en un "edgerunner".
+                            </p>
+                        </div>
                     </article>
-
                     <article class="main__characters__char">
-                        <img class="main__characters__char__img main__characters__char__imgLucy" src="IMG/lucy.png" alt="personaje David">
-                        <h3 class="main__characters__char__name">Lucy Kushinada</h3>
-                        <p class="main__characters__char__description">
-                            Una joven "netrunner" que se involucra románticamente con David y le presenta el inframundo 
-                            criminal de Night City. Tiene un odio particular hacia Arasaka y sueña con viajar a la Luna.
-                        </p>
+                        <div class="main__characters__char__content main__characters__char__imgLucy">
+                            <h3 class="main__characters__char__content__name">Lucy Kushinada</h3>
+                            <p class="main__characters__char__content__summary">
+                                Una joven "netrunner" que se involucra románticamente con David y le presenta el inframundo 
+                                criminal de Night City. Tiene un odio particular hacia Arasaka y sueña con viajar a la Luna.
+                            </p>
+                        </div>
                     </article>
-
                     <article class="main__characters__char">
-                        <img class="main__characters__char__img main__characters__char__imgRebecca" src="IMG/rebeca.png" alt="personaje David">
-                        <h3 class="main__characters__char__name">Rebecca</h3>
-                        <p class="main__characters__char__description">
-                            Una edgerunner de gatillo fácil miembro de la pandilla de Maine. Ella es también la hermana menor de Pilar.
-                        </p>
+                        <div class="main__characters__char__content main__characters__char__imgRebecca">
+                            <h3 class="main__characters__char__content__name">Rebecca</h3>
+                            <p class="main__characters__char__content__summary">
+                                Una edgerunner de gatillo fácil miembro de la pandilla de Maine. Ella es también la hermana menor de Pilar.
+                            </p>
+                        </div>
                     </article>
-
                     <article class="main__characters__char">
-                        <img class="main__characters__char__img main__characters__char__imgPilar" src="IMG/pilar.png" alt="personaje David">
-                        <h3 class="main__characters__char__name">Pilar</h3>
-                        <p class="main__characters__char__description">
-                            Un edgerunner de vanguardia al que se le describe como un «techie», cósmico y tosco. 
-                            Él y su hermana Rebecca generalmente se unen al equipo de Maine para hacer trabajos de mercenarios.
-                        </p>
+                        <div class="main__characters__char__content main__characters__char__imgPilar">
+                            <h3 class="main__characters__char__content__name">Pilar</h3>
+                            <p class="main__characters__char__content__summary">
+                                Un edgerunner de vanguardia al que se le describe como un "techie", cósmico y tosco. 
+                                Él y su hermana Rebecca generalmente se unen al equipo de Maine para hacer trabajos de mercenarios.
+                            </p>
+                        </div>
                     </article>
-
                     <article class="main__characters__char">
-                        <img class="main__characters__char__img main__characters__char__imgKiwi" src="IMG/kiwi.png" alt="personaje David">
-                        <h3 class="main__characters__char__name">Kiwi</h3>
-                        <p class="main__characters__char__description">
-                            Una netrunner veterana que siempre es fría y estoica. Es parte del grupo de Maine y también sirve como mentora de Lucy.
-                        </p>
+                        <div class="main__characters__char__content main__characters__char__imgKiwi">
+                            <h3 class="main__characters__char__content__name">Kiwi</h3>
+                            <p class="main__characters__char__content__summary">
+                                Una netrunner veterana que siempre es fría y estoica. Es parte del grupo de Maine y también sirve como mentora de Lucy.
+                            </p>
+                        </div>
                     </article>
-
                     <article class="main__characters__char">
-                        <img class="main__characters__char__img main__characters__char__imgMaine" src="IMG/maine.png" alt="personaje David">
-                        <h3 class="main__characters__char__name">Maine</h3>
-                        <p class="main__characters__char__description">
-                            Un edgerunner veterano que comanda su propia pandilla. Es uno de los clientes de Glora y permite a David unirse al grupo bajo su guía.
-                        </p>
+                        <div class="main__characters__char__content main__characters__char__imgMaine">
+                            <h3 class="main__characters__char__content__name">Maine</h3>
+                            <p class="main__characters__char__content__summary">
+                                Un edgerunner veterano que comanda su propia pandilla. Es uno de los clientes de Glora y permite a David unirse al grupo bajo su guía.
+                            </p>
+                        </div>
                     </article>
-
                     <article class="main__characters__char">
-                        <img class="main__characters__char__img main__characters__char__imgDorio" src="IMG/dorio.png" alt="personaje David">
-                        <h3 class="main__characters__char__name">Dorio</h3>
-                        <p class="main__characters__char__description">
-                            Una edgerunner veterana y mano derecha de Maine. Es muy fuerte y a pesar de su apariencia ruda, 
-                            tiene un lado tierno que solo muestra a las personas en las que confía.
-                        </p>
+                        <div class="main__characters__char__content main__characters__char__imgDorio">
+                            <h3 class="main__characters__char__content__name">Dorio</h3>
+                            <p class="main__characters__char__content__summary">
+                                Una edgerunner veterana y mano derecha de Maine. Es muy fuerte y a pesar de su apariencia ruda, 
+                                tiene un lado tierno que solo muestra a las personas en las que confía.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="main__characters__char">
+                        <div class="main__characters__char__content main__characters__char__imgRipperdoc">
+                            <h3 class="main__characters__char__content__name">Ripperdoc</h3>
+                            <p class="main__characters__char__content__summary">
+                                Siendo conocido también como «Doc», es un «ripperdoc» de Santo Domingo que reparte productos 
+                                del mercado negro a los residentes de la zona, algo que para el propio David está al tanto para 
+                                ponerse implantes cibernéticos en su cuerpo como para adquirir inmunosupresores.
+                            </p>
+                        </div>
                     </article>
                 </div>
             </section>
             <section class="main__history_summary" id="summary">
-                <img class="main__history_summary__img" src="IMG/nigthCity.png" alt="ciudad nigth city">
+                <img class="main__history_summary__img" src="IMG/nigthCity.webp" alt="ciudad nigth city">
                 <p class="main__history_summary__p">
                     La historia de Cyberpunk: Edgerunners transcurre en la ciudad estadounidense de Night City, una megaciudad en el Estado Libre de California del Norte. 
                     Dicha ciudad sufre una gran corrupción, adicción cibernética y violencia de pandillas. La ciudad está dividida en seis distritos, 

@@ -1,9 +1,56 @@
 let positionSlider = 0;
 
-document.addEventListener("DOMContentLoaded", ()=>{
-    track.insertAdjacentElement("afterbegin", lastTrackElement);
-});
+function slider(direccion) {
+    const track = document.getElementById("track");
+    const trackElement = document.querySelectorAll(".main__characters__char");
+    let firstTrackElement = trackElement[0];
+    let lastTrackElement = trackElement[trackElement.length - 1];
 
+
+
+
+
+    
+    if (direccion && positionSlider !== -87.5) {
+        positionSlider = positionSlider - 12.5;
+        track.style.transform = `translateX(${positionSlider}%)`;
+    } else if(!direccion && positionSlider !== 0){
+        positionSlider = positionSlider + 12.5;
+        track.style.transform = `translateX(${positionSlider}%)`;
+    }
+}
+
+
+/*
+document.addEventListener("DOMContentLoaded", ()=>{
+    function slider(direccion) {
+        const track = document.getElementById("track");
+        const trackElement = document.querySelectorAll(".main__characters__char");
+        let firstTrackElement = trackElement[0];
+        let lastTrackElement = trackElement[trackElement.length - 1];
+        
+        if (direccion) {
+            track.style.transition = "transform 0.5s";
+            track.style.transform = `translateX(-13.5%)`;
+            let wait = setTimeout(() => {
+                track.style.transition = "none";
+                track.insertAdjacentElement("beforeend", firstTrackElement);
+                track.style.transform = `translateX(13.5%)`;
+                clearTimeout(wait);
+            }, 500);
+        } else{
+            track.style.transition = "transform 0.5s";
+            track.style.transform = `translateX(13.5%)`;
+            let wait = setTimeout(() => {
+                track.style.transition = "none";
+                track.insertAdjacentElement("afterbegin", lastTrackElement);
+                track.style.transform = `translateX(-13.5%)`;
+                clearTimeout(wait);
+            }, 500);
+        }
+    }
+});
+*/
 window.addEventListener("mousemove", (e)=>{
     const bannerItem = document.querySelectorAll(".banner__item");
     let posY = e.clientY - window.innerHeight / 2;
@@ -38,32 +85,3 @@ window.addEventListener("scroll", (e)=>{
         borderR.style.right = "-50px";
     }
 });
-
-
-
-function slider(direccion) {
-    const track = document.getElementById("track");
-    const trackElement = document.querySelectorAll(".main__characters__char");
-    let firstTrackElement = trackElement[0];
-    let lastTrackElement = trackElement[trackElement.length - 1];
-
-    if (direccion) {
-        track.style.transition = "transform 0.5s";
-        track.style.transform = `translateX(-200px)`;
-        let wait = setTimeout(() => {
-            track.style.transition = "none";
-            track.insertAdjacentElement("beforeend", firstTrackElement);
-            track.style.transform = `translateX(200px)`;
-            clearTimeout(wait);
-        }, 600);
-    } else{
-        track.style.transition = "transform 0.5s";
-        track.style.transform = `translateX(200px)`;
-        let wait = setTimeout(() => {
-            track.style.transition = "none";
-            track.insertAdjacentElement("afterbegin", lastTrackElement);
-            track.style.transform = `translateX(-200px)`;
-            clearTimeout(wait);
-        }, 600);
-    }
-}
