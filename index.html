@@ -34,11 +34,11 @@
         <nav id="nav" class="nav">
             <ul>
                 <li><a href="#">INICIO</a></li>
-                <li><a href="">INFORMACION</a></li>
+                <li><a href="#information">INFORMACION</a></li>
             </ul>
             <img src="IMG/Logo.webp" alt="">
             <ul>
-                <li><a href="#">PERSONAJES</a></li>
+                <li><a href="#characters">PERSONAJES</a></li>
                 <li><a href="#summary">HISTORIA</a></li>
             </ul>
         </nav>
@@ -46,9 +46,11 @@
         <aside id="nav_der" class="nav_bordes__der"></aside>
         <main>
             <section class="main__trailer">
+                <h3 class="main__trailer__title">Trailer</h3>
                 <iframe class="main__trailer__video" src="https://www.youtube.com/embed/3s4uuDJbqBs" frameborder="0"></iframe>
             </section>
-            <section class="main__info">
+            <h3 class="main__info__title info">Información</h3>
+            <section class="main__info info" id="information">
                 <img class="main__info__img" src="IMG/portada.webp" alt="portada de la serie">
                 <ul class="main__info__list">
                     <li class="main__info__list__item"><b>Nombre:</b> Cyberpunk Edgerunners</li>
@@ -58,10 +60,20 @@
                     <li class="main__info__list__item"><b>Estudio:</b> CD Projekt RED, Studio Trigger</li>
                 </ul>
             </section>
-            <section class="main__characters">
+            <h3 class="main__characters__title characters">Personajes</h3>
+            <section class="main__characters characters" id="characters">
                 <button class="characters__track__left" onclick="slider(false)"><</button>
                 <button class="characters__track__right" onclick="slider(true)">></button>
                 <div class="characters__track" id="track">
+                    <article class="main__characters__char">
+                        <div class="main__characters__char__content main__characters__char__imgLucy">
+                            <h3 class="main__characters__char__content__name">Lucy Kushinada</h3>
+                            <p class="main__characters__char__content__summary">
+                                Una joven "netrunner" que se involucra románticamente con David y le presenta el inframundo 
+                                criminal de Night City. Tiene un odio particular hacia Arasaka y sueña con viajar a la Luna.
+                            </p>
+                        </div>
+                    </article>
                     <article class="main__characters__char">
                         <div class="main__characters__char__content main__characters__char__imgDavid">
                             <h3 class="main__characters__char__content__name">David Matinez</h3>
@@ -70,15 +82,6 @@
                                 Debido a que proviene de una familia pobre, sus compañeros de clase lo acosan sin descanso 
                                 y siente que no pertenece a la escuela. Una tragedia repentina y devastadora lo lleva a 
                                 abandonar su educación y lo pone en el camino de convertirse en un "edgerunner".
-                            </p>
-                        </div>
-                    </article>
-                    <article class="main__characters__char">
-                        <div class="main__characters__char__content main__characters__char__imgLucy">
-                            <h3 class="main__characters__char__content__name">Lucy Kushinada</h3>
-                            <p class="main__characters__char__content__summary">
-                                Una joven "netrunner" que se involucra románticamente con David y le presenta el inframundo 
-                                criminal de Night City. Tiene un odio particular hacia Arasaka y sueña con viajar a la Luna.
                             </p>
                         </div>
                     </article>
@@ -136,10 +139,11 @@
                     </article>
                 </div>
             </section>
-            <section class="main__history_summary" id="summary">
+            <h3 class="main__history_summary__title summary">Historia</h3>
+            <section class="main__history_summary summary" id="summary">
                 <img class="main__history_summary__img" src="IMG/nigthCity.webp" alt="ciudad nigth city">
                 <p class="main__history_summary__p">
-                    La historia de Cyberpunk: Edgerunners transcurre en la ciudad estadounidense de Night City, una megaciudad en el Estado Libre de California del Norte. 
+                    &nbspLa historia de Cyberpunk: Edgerunners transcurre en la ciudad estadounidense de Night City, una megaciudad en el Estado Libre de California del Norte. 
                     Dicha ciudad sufre una gran corrupción, adicción cibernética y violencia de pandillas. La ciudad está dividida en seis distritos, 
                     cada uno de los cuales tiene sus propios requisitos de vida precisos, y está controlada por varias megacorporaciones diferentes, 
                     incluidas Arasaka Corporation y su rival Militech Corporation.
